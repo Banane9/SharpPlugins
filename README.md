@@ -40,9 +40,19 @@ namespace SharpPlugins.Example
     private static void Main(string[] args)
     {
       var pluginInstance = PluginLoader.InstanciatePlugins<ApplicationPluginBase>(new Type[] { typeof(ExampleApplicationPlugin) }).First();
+      
+      pluginInstance.DoStuff();
     }
   }
 }
 
 
 ```
+
+To get the Types one would use the `PluginLoader.LoadPluginsFromFiles<T>` or `PluginLoader.LoadPluginsFromFolders<T>` methods, but here we know the Type, so we can pass it directly to the `PluginLoader.InstanciatePlugins<T>` method.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+##License##
+
+#####[GPL V2](https://github.com/Banane9/SharpPlugins/blob/master/LICENSE.md)#####
