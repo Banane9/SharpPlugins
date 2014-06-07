@@ -55,7 +55,7 @@ namespace SharpPlugins
         public static IEnumerable<Type> LoadPluginsFromFiles<TPlugin>(IEnumerable<string> pluginFiles) where TPlugin : PluginBase
         {
             return from pluginFile in pluginFiles
-                   where File.Exists(pluginFile) && Path.GetExtension(pluginFile).Equals("dll", StringComparison.InvariantCultureIgnoreCase)
+                   where File.Exists(pluginFile) && Path.GetExtension(pluginFile).Equals(".dll", StringComparison.InvariantCultureIgnoreCase)
                    let assembly = Assembly.LoadFrom(pluginFile)
                    from type in assembly.GetExportedTypes()
                    where typeof(TPlugin).IsAssignableFrom(type) && IsInstanciablePlugin(type)
@@ -69,7 +69,7 @@ namespace SharpPlugins
         /// <typeparam name="TPlugin">The Type that the plugins have to be derived from.</typeparam>
         /// <param name="pluginFolders">The paths to the folders to check.</param>
         /// <returns>The Types of the found instanciable plugins.</returns>
-        public static IEnumerable<Type> LoadPluginsFromFolders<TPlugin>(IEnumerable<string> pluginFolders) where TPlugin : PluginBase, new()
+        public static IEnumerable<Type> LoadPluginsFromFolders<TPlugin>(IEnumerable<string> pluginFolders) where TPlugin : PluginBase
         {
             return from pluginFolder in pluginFolders
                    where Directory.Exists(pluginFolder)
