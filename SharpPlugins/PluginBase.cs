@@ -17,7 +17,7 @@ namespace SharpPlugins
         public static string GetAuthor(Type type)
         {
             var attribute = getAttribute(type);
-            return attribute == null ? string.Empty : attribute.Author != null ? string.Empty : attribute.Author;
+            return attribute == null ? string.Empty : attribute.Author == null ? string.Empty : attribute.Author;
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace SharpPlugins
         public static string GetDescription(Type type)
         {
             var attribute = getAttribute(type);
-            return attribute == null ? string.Empty : attribute.Description != null ? string.Empty : attribute.Description;
+            return attribute == null ? string.Empty : attribute.Description == null ? string.Empty : attribute.Description;
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace SharpPlugins
         public static string GetName(Type type)
         {
             var attribute = getAttribute(type);
-            return attribute == null ? string.Empty : attribute.Name != null ? string.Empty : attribute.Name;
+            return attribute == null ? string.Empty : attribute.Name == null ? string.Empty : attribute.Name;
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace SharpPlugins
         public static string GetVersion(Type type)
         {
             var attribute = getAttribute(type);
-            return attribute == null ? string.Empty : attribute.Version != null ? string.Empty : attribute.Version;
+            return attribute == null ? string.Empty : attribute.Version == null ? string.Empty : attribute.Version;
         }
 
         /// <summary>
