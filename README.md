@@ -26,7 +26,7 @@ namespace SharpPlugins.Example
   }
   
   
-  [RegisterPlugin(name: "Example Plugin", author: "Banane9")]
+  [RegisterPlugin("ExamplePlugin", name: "Example Plugin", author: "Banane9")]
   public class ExampleApplicationPlugin : ApplicationPluginBase
   {
     public override void DoStuff()
