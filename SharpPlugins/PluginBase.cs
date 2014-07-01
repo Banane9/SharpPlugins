@@ -39,7 +39,7 @@ namespace SharpPlugins
         public static string GetIdentifier(Type type)
         {
             var attribute = getAttribute(type);
-            return attribute == null ? string.Empty : attribute.Identifier == null ? string.Empty : attribute.Name;
+            return attribute == null ? string.Empty : attribute.Identifier == null ? string.Empty : attribute.Identifier;
         }
 
         /// <summary>
