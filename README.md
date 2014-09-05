@@ -55,4 +55,4 @@ To get the Types one would use the `PluginLoader.LoadPluginsFromFiles<T>` or `Pl
 
 ##License##
 
-#####[GPL V2](https://github.com/Banane9/SharpPlugins/blob/master/LICENSE.md)#####
+#####[LGPL V2.1](https://github.com/Banane9/SharpPlugins/blob/master/LICENSE.md)#####
